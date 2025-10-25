@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programme du 31 octobre</title>
+
+  <style>
+    body {
+      background-color: #ff8c00; /* fond orange */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+      background-image: url('https://cdn.pixabay.com/photo/2017/10/26/18/39/halloween-2893710_1280.png');
+      background-repeat: no-repeat;
+      background-size: 150px;
+      background-position: top right;
+    }
+
+    h1 {
+      font-family: 'Creepster', cursive; /* police flippante */
+      font-size: 3em;
+      font-weight: bold;
+      text-decoration: underline;
+      text-align: center;
+      color: black;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-family: 'Nosifer', cursive;
+      font-size: 1.8em;
+      margin-top: 20px;
+      color: #3b0a0a;
+    }
+
+    p {
+      font-size: 1em;
+      margin-left: 20px;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .footer {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 1.2em;
+      color: #ffff33; /* jaune fluo */
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .spooky-button {
+      display: block;
+      background-color: #3b0a0a;
+      color: #ffcc00;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin: 30px auto;
+      transition: 0.3s;
+    }
+
+    .spooky-button:hover {
+      background-color: #660000;
+      transform: scale(1.1);
+    }
+
+    /* Image flippante plein écran */
+    #scary-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.95);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+
+    #scary-image img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    #scary-image p {
+      color: red;
+      font-size: 2em;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+      font-family: 'Nosifer', cursive;
+    }
+  </style>
+
+  <!-- Polices Google flippantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Programme du 31 octobre</h1>
+
+  <h2>Journée</h2>
+  <p>Préparation des décorations et du spectacle de soirée</p>
+
+  <h2>Soir</h2>
+  <p>=&gt; Repas (potentiellement festif)</p>
+  <p class="bold">=&gt; Spectacle d'Halloween interprété par Heather, Lindsay et Abraham</p>
+
+  <div class="footer">
+    🎟️ Les billets sont disponibles dès le 24 octobre, profitez-en !  
+    Il y a une promo de <b>-100%</b>.  
+    Pour l’achat, rendez-vous auprès de <b>Heather</b>. 🎃
+  </div>
+
+  <button class="spooky-button" onclick="showScaryImage()">Clique ici... si tu n’as pas peur</button>
+
+  <div id="scary-image">
+    <img src="https://cdn.pixabay.com/photo/2017/10/31/19/05/halloween-2907727_1280.jpg" alt="Image flippante">
+    <p>!VITE!: rendez-vous le 31 octobre après manger dans la grande chambre !</p>
+  </div>
+
+  <script>
+    function showScaryImage() {
+      const scary = document.getElementById("scary-image");
+      scary.style.display = "flex";
+      setTimeout(() => {
+        scary.style.display = "none";
+      }, 5000); // 5 secondes
+    }
+  </script>
+</body>
+</html>
